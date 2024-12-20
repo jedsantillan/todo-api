@@ -10,6 +10,6 @@ namespace Todo.Domain.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public bool isDone { get; set; } = false;
+        public bool IsDone { get; set; } = false;
     }
 }

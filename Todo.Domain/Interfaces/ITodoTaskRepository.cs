@@ -10,7 +10,7 @@ namespace Todo.Domain.Interfaces
     public interface ITodoTaskRepository
     {
         Task<List<TodoTask>> GetAllTodoTasksAsync();
-        Task<TodoTask> GetTodoTaskByIdAsync();
+        Task<TodoTask?> GetTodoTaskByIdAsync(int id);
         Task AddTodoTaskAsync(TodoTask todoTask);
         Task DeleteTodoTaskAsync(int id);
 
