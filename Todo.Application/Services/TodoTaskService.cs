@@ -8,7 +8,7 @@ using Todo.Domain.Interfaces;
 
 namespace Todo.Application.Services
 {
-    public class TodoTaskService
+    public class TodoTaskService : ITodoTaskService
     {
         private readonly ITodoTaskRepository _todoTaskRepository;
 
