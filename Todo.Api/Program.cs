@@ -20,7 +20,9 @@ builder.Services.AddDbContext<TodoTaskDbContext>(options =>
 
 // Dependency Injection for in-memory DB and services
 builder.Services.AddScoped<ITodoTaskRepository, InMemoryTodoTaskRepository>();
-builder.Services.AddScoped<TodoTaskService>();
+builder.Services.AddScoped<ITodoTaskService, TodoTaskService>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());    // configures Automapper to map DTO to Entity
 
 var app = builder.Build();
 
